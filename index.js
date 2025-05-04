@@ -25,9 +25,9 @@ app.get("/api/:date?", function (req, res) {
     date = new Date();
   } else {
     if (!isNaN(dateRquest)) {
-      date = new Date(parseInt(dateString));
+      date = new Date(parseInt(dateRquest));
     } else {
-      date = new Date(dateString);
+      date = new Date(dateRquest);
     }
   }
   if (date.toString() === "Invalid Date") {
